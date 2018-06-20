@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Author } from '../author';
-import { AUTHORS } from '../mock-authors';
 import { AuthorService } from '../author.service';
 
 @Component({
