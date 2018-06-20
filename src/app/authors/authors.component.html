@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card">
+      <h2>My Authors</h2>
+      <ul class="authors list-group">
+        <a routerLink="/authorDetail/0">
+          <li id="new" class="list-group-item">Create new author</li>
+        </a>
+        <a *ngFor="let author of authors" routerLink="/authorDetail/{{author.id}}">
+          <li class="list-group-item">
+              <span style="color: black">
+                  {{author.firstName}} {{author.middleName}} {{author.lastName}}
+              </span>
+            </li>
+        </a>
+      </ul>
+    </div>
+</div>

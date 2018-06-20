@@ -1,0 +1,34 @@
+<!-- <div class="container">
+  <h2 class="row">My Books</h2>
+  <ul class="books">
+    <li class="row col-md-8" *ngFor="let book of books">
+      <a routerLink="/bookDetail/{{book.id}}">
+      {{book.title}}
+      </a>
+      <button class="delete" title="delete book"
+      (click)="delete(book)">x</button>
+    </li>
+  </ul>
+</div>
+ -->
+
+<div class="container">
+    <div class="card">
+        <h2>My Books</h2>
+        <ul class="list-group">
+          <a routerLink="/bookDetail/0">
+            <li id="new" class="list-group-item">Create new book</li>
+          </a>
+          <a *ngFor="let book of books" routerLink="/bookDetail/{{book.id}}">
+            <li class="list-group-item">
+                <span style="color: black">
+                    {{book.title}}
+                </span>
+              </li>
+          </a>
+        </ul>
+      </div>
+  </div>
+ 
+ 
+ 

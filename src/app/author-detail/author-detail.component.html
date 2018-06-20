@@ -1,0 +1,93 @@
+<!-- Functionality of adding middle name when not exists needs finishing -->
+
+<div class="card">
+    <h2 class="card-title offset-sm-3" 
+    style="text-align: left;">{{author.id}} - {{author.lastName}} - {{nationality.nationalityName}}</h2>
+    <div class="form-group row">
+      <label for="inputFirst" 
+      class="col-sm-2 offset-sm-1" 
+      style="text-align: left;">First Name</label>
+      <input type="text" 
+      name="firstName" 
+      [(ngModel)]="author.firstName" 
+      class="form-control col-10 col-sm-5" 
+      id="inputFirst" 
+      placeholder="First name">
+    </div>
+    <div *ngIf="author.middleName != ''" class="form-group row">
+      <label for="inputMiddle" 
+      class="col-sm-2 offset-sm-1" 
+      style="text-align: left;">Middle Name</label>
+      <input type="text" 
+      name="middleName" 
+      [(ngModel)]="author.middleName" 
+      class="form-control col-10 col-sm-5" 
+      id="inputMiddle" 
+      placeholder="Middle name">
+    </div>
+    <div class="form-group row">
+      <label for="inputLast" 
+      class="col-sm-2 offset-sm-1" 
+      style="text-align: left;">Last name</label>
+      <input type="text" 
+      name="lastName" 
+      [(ngModel)]="author.lastName" 
+      class="form-control col-10 col-sm-5" 
+      id="inputLast" 
+      placeholder="Last name">
+    </div>
+    <div class="form-group row">
+      <label for="inputNat" 
+      class="col-sm-2 offset-sm-1" 
+      style="text-align: left;">Nationality</label>
+      <input type="text" 
+      name="nationalityID" 
+      [(ngModel)]="author.nationalityID" 
+      class="form-control col-sm-1" 
+      id="inputNat" 
+      placeholder="Nationality ID">
+    </div>
+    <div class="row offset-sm-3">
+      <button (click)="goBack()" 
+      type="button" 
+      class="col-sm-2 btn btn-sm btn-primary"
+      style="margin: 0.5em 1em 1em 0;">Go back</button>
+    <button (click)="save()"
+    type="button" 
+      class="col-sm-2 btn btn-sm btn-success"
+      style="margin: 0.5em 1em 1em 0;">Save</button>
+    <button *ngIf="author.id != 0" (click)="delete()"
+    type="button" 
+      class="col-sm-2 btn btn-sm btn-danger"
+      style="margin: 0.5em 1em 1em 0;">Delete</button>
+    <button *ngIf="author.middleName == ''"
+    type="button" 
+      class="col-sm-2 btn btn-sm"
+      style="margin: 0.5em 1em 1em 0;">Add middle name</button>
+    </div>
+  </div>
+
+
+
+
+<!-- <div *ngIf="author">
+ 
+  <h2>Author Details: {{author.firstName}} {{author.middleName}} {{author.lastName}}</h2>
+  <div>
+    <span>id: </span>{{author.id}} 
+    <label>First Name:
+      <br><input [(ngModel)]="author.firstName" placeholder="firstName">
+    </label><br>
+    <label>Middle Name:
+      <br><input [(ngModel)]="author.middleName" placeholder="No middle name">
+    </label><br>
+    <label>Last Name:
+      <br><input [(ngModel)]="author.lastName" placeholder="lastName">
+    </label><br>
+    <label>Nationality ID:
+      <br><input [(ngModel)]="author.nationalityID" placeholder="nationalityId">
+    </label><br><br>
+    <button (click)="goBack()">Go Back</button>
+    <button (click)="save()">Save</button>
+  </div> 
+</div> -->

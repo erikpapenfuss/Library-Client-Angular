@@ -1,0 +1,86 @@
+ <!-- <div *ngIf="book"> -->
+  <!-- <form> -->
+    <div class="card">
+      <h2 class="card-title offset-sm-3" 
+      style="text-align: left;">{{book.title}}</h2>
+      <div class="form-group row">
+        <label for="inputTitle" 
+        class="col-sm-2 offset-sm-1" 
+        style="text-align: left;">Book title</label>
+        <input type="text" 
+        name="title" 
+        [(ngModel)]="book.title" 
+        class="form-control col-10 col-sm-6" 
+        id="inputTitle" 
+        placeholder="Title">
+      </div>
+      <div class="form-group row">
+        <label for="inputDescription" 
+        class="col-sm-2 offset-sm-1" 
+        style="text-align: left;">Book description</label>
+        <textarea class="form-control col-sm-6"
+        id="inputDescription" 
+        name="description" 
+        [(ngModel)]="book.description" 
+        cols="44" rows="8" 
+        placeholder="Description"></textarea>
+      </div>
+      <div class="form-group row">
+        <label for="inputAuthorId" 
+        class="col-sm-2 offset-sm-1" 
+        style="text-align: left;">Book author id</label>
+        <input type="text" 
+        name="authorID" 
+        [(ngModel)]="book.authorID" 
+        class="form-control col-sm-1" 
+        id="inputinputAuthorId" 
+        placeholder="ID">
+      </div>
+      <div class="form-check offset-sm-3"  
+      style="text-align: left;">
+        <input type="checkbox" 
+        name="isRented" 
+        [(ngModel)]="book.isRented" 
+        class="form-check-input" 
+        id="rentStatus">
+        <label class="form-check-label" 
+        for="rentStatus">Is Rented</label>
+      </div>
+      <div class="row offset-sm-3">
+        <button (click)="goBack()" 
+          type="button" 
+          class="col-sm-2 btn btn-sm btn-primary"
+          style="margin: 0.5em 1em 1em 0;">Go back</button>
+        <button (click)="save()"
+          type="button" 
+          class="col-sm-2 btn btn-sm btn-success"
+          style="margin: 0.5em 1em 1em 0;">Save</button>
+        <button *ngIf="book.id != 0" (click)="delete()"
+          type="button" 
+          class="col-sm-2 btn btn-sm btn-danger"
+          style="margin: 0.5em 1em 1em 0;">Delete</button>
+          
+      </div>
+    </div>
+  <!-- </form> -->
+<!-- </div> -->
+<!-- 
+  <h2>Book Details</h2>
+  <div>
+    <label>Title:
+      <br><input size="55" [(ngModel)]="book.title" placeholder="title">
+    </label><br>
+    <label>Description:
+      <br><textarea 
+      rows="8" cols="62"
+      [(ngModel)]="book.description" placeholder="description"></textarea>
+    </label><br>
+    <label>Author ID:
+      <input size="5" [(ngModel)]="book.authorID" placeholder="author id">
+    </label><br>
+    <label>Rent Status:
+      <input type="checkbox" [(ngModel)]="book.isRented" placeholder="rent status">
+    </label><br>
+    <button (click)="goBack()">Go Back</button>
+    <button (click)="save()">Save</button>
+  </div> -->
