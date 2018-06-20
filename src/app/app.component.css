@@ -25,6 +25,7 @@ a {
 
 nav {
     text-align: center;
+    background-color: rgb(124, 211, 255);
 }
 
 .container {
@@ -33,7 +34,7 @@ nav {
   }
 
   #header {
-    background: #ededed;
+    background-color: rgb(0, 114, 172);
     padding: 10px;
   }
   #wrapper {
